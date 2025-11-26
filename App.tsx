@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { UserRole, Post, ViewType, UserProfile, Comment, Message, Institution, OnboardingRequest } from './types';
 import { db } from './services/mockFirebase';
@@ -9,7 +8,8 @@ import {
 } from 'lucide-react';
 
 // --- Constants ---
-const SQUADRAN_LOGO_URL = "./logo squadran.jpg"; 
+// Use URL encoding for spaces to prevent 404s on some hosting providers
+const SQUADRAN_LOGO_URL = "./logo%20squadran.jpg"; 
 
 // --- Animation Component ---
 const CursorBloop = () => {

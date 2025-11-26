@@ -1,5 +1,3 @@
-
-
 export enum UserRole {
   SUPER_ADMIN = 'SUPER_ADMIN', // Squadran Owner
   INSTITUTION_ADMIN = 'INSTITUTION_ADMIN', // School Admin
@@ -19,26 +17,6 @@ export enum ViewType {
   ADMIN_DASHBOARD = 'ADMIN_DASHBOARD', // Institution Level Admin
   USER_DASHBOARD = 'USER_DASHBOARD',
   PROFILE = 'PROFILE'
-}
-
-export enum FeatureType {
-  CONTENT_ASSISTANT = 'CONTENT_ASSISTANT'
-}
-
-export interface Feature {
-  id: FeatureType;
-  title: string;
-  subtitle: string;
-  description: string;
-  icon: string;
-  color: string;
-  bgColor: string;
-}
-
-export interface ChatMessage {
-  role: 'user' | 'model';
-  text: string;
-  timestamp: number;
 }
 
 // --- Squadran Schema Types ---
@@ -107,4 +85,14 @@ export interface Post {
   timestamp: number;
   company?: string;
   jobLink?: string;
+}
+
+export interface Feature {
+  id?: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: string;
+  color: string;
+  bgColor: string;
 }

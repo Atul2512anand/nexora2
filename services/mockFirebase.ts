@@ -366,7 +366,8 @@ export const db = {
       userId,
       userName,
       text,
-      timestamp: Date.now()
+      timestamp: Date.now(),
+      read: false
     };
     if (post) {
       post.comments.push(newComment);
